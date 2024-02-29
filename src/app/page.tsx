@@ -1,6 +1,7 @@
 "use client";
 import Header from "@/components/Header/page";
 import { useEffect, useRef } from "react";
+import Scene from "./test/page";
 
 const IndexPage: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -71,8 +72,17 @@ const IndexPage: React.FC = () => {
   return (
     <>
       <Header />
-      <div className="h-screen bg-black w-full">
-        <canvas ref={canvasRef} className="w-full h-full"></canvas>
+
+      <div className="h-screen bg-black w-full relative">
+        <canvas
+          ref={canvasRef}
+          className="w-full h-full absolute top-0 left-0"
+        ></canvas>
+        <div className="    pt-[900px]">
+          <div className=" absolute top-1/2 right-1/4  z-50">
+            <Scene />
+          </div>
+        </div>
       </div>
     </>
   );

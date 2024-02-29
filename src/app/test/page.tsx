@@ -1,6 +1,6 @@
 import React from "react";
 
-const page = () => {
+const Scene = () => {
   return (
     <div className="scene">
       <div className="column">
@@ -607,4 +607,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Scene;
