@@ -88,7 +88,7 @@ const Header: React.FC = () => {
                 });
                 gsap.to(activeElement, {
                   "--active-element-opacity": 0,
-                  delay: 0.45,
+                  delay: 0.1,
                   duration: 0.25,
                 });
               },
@@ -114,7 +114,7 @@ const Header: React.FC = () => {
       });
     });
 
-    const createSVG = (element) => {
+    const createSVG = (element: HTMLDivElement) => {
       element.innerHTML = `
         <svg viewBox="0 0 116 5" preserveAspectRatio="none" class="beam">
           <path d="M0.5 2.5L113 0.534929C114.099 0.515738 115 1.40113 115 2.5C115 3.59887 114.099 4.48426 113 4.46507L0.5 2.5Z" fill="url(#gradient-beam)"/>
@@ -147,22 +147,22 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <nav>
+      <nav className=" p-4 font-sen">
         <ul>
-          <li className="active">
-            <button>Animation</button>
+          <li className="active center">
+            <button>navone</button>
           </li>
           <li>
-            <button>Branding</button>
+            <button>navone</button>
           </li>
           <li>
-            <button>Illustration</button>
+            <button>navone</button>
           </li>
           <li>
-            <button>Illustration</button>
+            <button>navone</button>
           </li>
           <li>
-            <button>Illustration</button>
+            <button>navone</button>
           </li>
         </ul>
         <div className="active-element"></div>

@@ -31,20 +31,13 @@ nav {
     padding: 0;
     list-style: none;
     display: flex;
-    gap: 40px;
+    gap: 80px;
+    padding-left: 600px;
 
     li {
       button {
         appearance: none;
-        border: none;
-        cursor: pointer;
-        background-color: transparent;
-        padding: 0;
-        margin: 0;
-        font-family: "Inter";
-        font-weight: 600;
-        font-size: 16px;
-        list-style: 22px;
+
         color: #5c5b66;
         transition: color 0.25s;
       }
@@ -58,7 +51,7 @@ nav {
       &:not(.active) {
         &:hover {
           button {
-            color: #807e8c;
+            color: #ffffff;
           }
         }
       }
@@ -76,11 +69,11 @@ nav {
 
     position: absolute;
     left: 0;
-    top: 34px;
+    top: 50px;
     height: 3px;
     width: 36px;
     border-radius: 2px;
-    background-color: #fff;
+    background-color: #324b3b;
     opacity: var(--active-element-show);
 
     & > svg,
@@ -170,8 +163,6 @@ html {
 }
 
 body {
-  justify-content: center;
-  align-items: center;
   background-color: #020112;
   position: relative;
   overflow: hidden;
@@ -182,22 +173,10 @@ body {
     inset: 40% -60% 0 -60%;
     background-image: radial-gradient(
       ellipse at bottom,
-      #152b9d 0%,
+      #0f30d3 0%,
       #020112 50%
     );
     opacity: 0.3;
     pointer-events: none;
-  }
-
-  .twitter {
-    position: fixed;
-    display: block;
-    right: 12px;
-    bottom: 12px;
-    svg {
-      width: 32px;
-      height: 32px;
-      fill: #fff;
-    }
   }
 }
