@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
+import Link from "next/link";
 
 const Header: React.FC = () => {
   useEffect(() => {
@@ -153,7 +154,9 @@ const Header: React.FC = () => {
             <button>navone</button>
           </li>
           <li>
-            <button>navone</button>
+            <button>
+              <Link href="/test">Test</Link>
+            </button>
           </li>
           <li>
             <button>navone</button>
