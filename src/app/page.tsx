@@ -1,4 +1,5 @@
 "use client";
+import Header from "@/components/Header/page";
 import { useEffect, useRef } from "react";
 
 const IndexPage: React.FC = () => {
@@ -68,9 +69,12 @@ const IndexPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="h-screen bg-black w-full">
-      <canvas ref={canvasRef} className="w-full h-full"></canvas>
-    </div>
+    <>
+      <Header />
+      <div className="h-screen bg-black w-full">
+        <canvas ref={canvasRef} className="w-full h-full"></canvas>
+      </div>
+    </>
   );
 };
 
