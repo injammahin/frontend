@@ -3,7 +3,7 @@ import React from "react";
 
 const MyComponent = () => {
   const bubbles = [];
-  for (let i = 0; i < 128; i++) {
+  for (let i = 0; i < 300; i++) {
     bubbles.push(
       <div
         key={i}

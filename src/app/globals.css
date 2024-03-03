@@ -1560,7 +1560,7 @@ body {
   font-family: "Open Sans", sans-serif;
   .footer {
     z-index: 1;
-    --footer-background: #5c0911;
+    --footer-background: #a83939;
     display: grid;
     position: relative;
     grid-area: footer;
