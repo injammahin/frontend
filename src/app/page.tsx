@@ -78,8 +78,14 @@ const IndexPage: React.FC = () => {
           ref={canvasRef}
           className="w-full h-full absolute top-0 left-0"
         ></canvas>
-        <div className="    pt-[900px]">
-          <div className=" absolute top-1/2 right-1/4  z-50">
+
+        <div
+          className="animate-bounce pt-[800px]"
+          style={{ animationDuration: "20s" }}
+        >
+          {" "}
+          {/* Adjust the animation duration here */}
+          <div className="absolute top-1/2 right-1/4 z-50">
             <Scene />
           </div>
         </div>

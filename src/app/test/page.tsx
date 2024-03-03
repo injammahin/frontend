@@ -2,7 +2,7 @@ import React from "react";
 
 const Scene = () => {
   return (
-    <div className="scene">
+    <div className="scene ">
       <div className="column">
         <div className="box">
           <i></i>

@@ -203,7 +203,7 @@ body * {
 .scene {
   position: relative;
   transform: rotateX(-30deg) rotateY(-60deg);
-  font-size: 60px;
+  font-size: 40px;
   -webkit-animation: sceneRotate 60s infinite linear;
   animation: sceneRotate 60s infinite linear;
 }
