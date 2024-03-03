@@ -1,10 +1,11 @@
 "use client";
 import Header from "@/components/Header/page";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Scene from "./test/page";
 
 const IndexPage: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [opacity, setOpacity] = useState(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -63,8 +64,12 @@ const IndexPage: React.FC = () => {
 
     window.addEventListener("resize", updateCanvasSize);
     updateCanvasSize(); // Initial size update
+    const timer = setTimeout(() => {
+      setOpacity(1); // Gradually make the Scene visible
+    }, 4000); // 10 seconds
 
     return () => {
+      clearTimeout(timer); // Clear the timer on component unmount
       window.removeEventListener("resize", updateCanvasSize);
     };
   }, []);
@@ -85,7 +90,14 @@ const IndexPage: React.FC = () => {
         >
           {" "}
           {/* Adjust the animation duration here */}
-          <div className="absolute top-1/2 right-1/4 z-50">
+          <div
+            className="absolute top-1/2 right-1/4 z-50 animate-bounce"
+            style={{
+              animationDuration: "20s",
+              opacity: opacity,
+              transition: "opacity 4s ease-in-out",
+            }} // Apply transition to change opacity
+          >
             <Scene />
           </div>
         </div>
