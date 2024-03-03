@@ -144,18 +144,14 @@ const Header: React.FC = () => {
           <li className="active center">
             <button>Nav One</button>
           </li>
-
           <li>
-            <button>
-              <Link href="/test">Test</Link>
-            </button>
+            <button>One</button>
           </li>
-
-          {/* Add more buttons as needed */}
           <li>
-            <button>
-              <Link href="/test">three</Link>
-            </button>
+            <button>Two</button>
+          </li>
+          <li>
+            <button>Three</button>
           </li>
           <li className="dropdown">
             <button>Four</button>
@@ -168,6 +164,37 @@ const Header: React.FC = () => {
         </ul>
         <div className="active-element"></div>
       </nav>
+
+      <style jsx>{`
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+
+        .dropdown-content a:hover {
+          background-color: #cccc;
+        }
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+      `}</style>
     </>
   );
 };

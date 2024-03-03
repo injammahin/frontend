@@ -18,8 +18,8 @@ const IndexPage: React.FC = () => {
 
       const letraTam = 12;
       const columnas = canvas.width / letraTam;
-      let Texto = "0".split("");
-      let Texto2 = "1".split("");
+      let Texto = "2".split("");
+      let Texto2 = "3".split("");
 
       const letras: number[] = [];
       for (let i = 0; i < columnas; i++) {
