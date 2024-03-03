@@ -1,25 +1,30 @@
+"use client";
 import React from "react";
-// Assuming the CSS is saved in this file
 
-const Footer = () => {
+const MyComponent = () => {
+  const bubbles = [];
+  for (let i = 0; i < 128; i++) {
+    bubbles.push(
+      <div
+        key={i}
+        className="bubble"
+        style={
+          {
+            "--size": `${2 + Math.random() * 4}rem`,
+            "--distance": `${6 + Math.random() * 4}rem`,
+            "--position": `${-5 + Math.random() * 110}%`,
+            "--time": `${2 + Math.random() * 2}s`,
+            "--delay": `${-1 * (2 + Math.random() * 2)}s`,
+          } as any
+        } // Casting to any to resolve the TypeScript error
+      ></div>
+    );
+  }
+
   return (
     <div className="main">
       <div className="footer">
-        <div className="bubbles">
-          {[...Array(128)].map((e, i) => (
-            <div
-              key={i}
-              className="bubble"
-              style={{
-                "--size": `${2 + Math.random() * 4}rem`,
-                "--distance": `${6 + Math.random() * 4}rem`,
-                "--position": `${-5 + Math.random() * 110}%`,
-                "--time": `${2 + Math.random() * 2}s`,
-                "--delay": `${-1 * (2 + Math.random() * 2)}s`,
-              }}
-            ></div>
-          ))}
-        </div>
+        <div className="bubbles">{bubbles}</div>
         <div className="content">
           <div>
             <div>
@@ -60,8 +65,7 @@ const Footer = () => {
               href="https://codepen.io/z-"
               target="_blank"
               style={{
-                backgroundImage:
-                  'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/happy.svg")',
+                backgroundImage: `url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/happy.svg")`,
               }}
             ></a>
             <p>©2019 Not Really</p>
@@ -82,6 +86,7 @@ const Footer = () => {
               values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
               result="blob"
             />
+            {/* <feComposite in="SourceGraphic" in2="blob" operator="atop" /> */}
           </filter>
         </defs>
       </svg>
@@ -89,4 +94,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default MyComponent;
