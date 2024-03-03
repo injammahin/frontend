@@ -2,6 +2,7 @@
 import Header from "@/components/Header/page";
 import { useEffect, useRef, useState } from "react";
 import Scene from "./test/page";
+import Footer from "@/components/Footer/page";
 
 const IndexPage: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -100,8 +101,11 @@ const IndexPage: React.FC = () => {
           >
             <Scene />
           </div>
+          <Footer />
         </div>
       </div>
+
+      <div className="bg-white"></div>
     </>
   );
 };

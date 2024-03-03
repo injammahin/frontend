@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import Link from "next/link";
-
+import Footer from "@/components/Footer/page";
 const Header: React.FC = () => {
   useEffect(() => {
     const navElement = document.querySelector("nav");
@@ -151,7 +151,9 @@ const Header: React.FC = () => {
             <button>Two</button>
           </li>
           <li>
-            <button>Three</button>
+            <button>
+              <Link href="/auth/register">link</Link>
+            </button>
           </li>
           <li className="dropdown">
             <button>Four</button>
@@ -166,6 +168,9 @@ const Header: React.FC = () => {
               <a href="#">Okay</a>
               <a href="#">No</a>
             </div>
+          </li>
+          <li>
+            <button onClick={Footer}>footer</button>
           </li>
         </ul>
         <div className="active-element"></div>
